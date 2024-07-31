@@ -7,7 +7,7 @@ import Navbar from "./components/navbar/navbar";
 function App() {
   return (
     <div className="bg-gradient-to-r from-slate-800 to-neutral-800 flex flex-col items-center">
-      <div className="w-full flex-wrap h-[40px] bg-green-400">
+      <div className="w-full flex-wrap h-[57px] bg-green-400">
       <Navbar />
       </div>
       <div className="flex-1 justify-center w-[70%] max-sm:w-full">
