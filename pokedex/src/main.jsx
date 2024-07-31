@@ -10,6 +10,7 @@ import Gigans from './pages/gigans.jsx'
 import Mega from './pages/mega.jsx'
 import About from './pages/about.jsx'
 import ErrorRoute from './pages/error.jsx'
+import PokemonDetail from './pages/detail/pokemonDetail.jsx'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,9 @@ const router = createBrowserRouter([
     }, {
       path: '/about',
       element: <About />
+    }, {
+      path: '/detail/pokemonDetail/:id',
+      element: <PokemonDetail />
     }]
 
   }])

@@ -6,7 +6,7 @@ export default function PokemonDetail() {
   const {id} = useParams()
 
   return (
-    <div>
+    <div className="container">
       <label>poke name</label>
       <label>poke id: {id}</label>
       <div>weight</div>

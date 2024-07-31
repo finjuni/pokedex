@@ -6,9 +6,11 @@ import Navbar from "./components/navbar/navbar";
 
 function App() {
   return (
-    <div className="w-full bg-gradient-to-r from-slate-800 to-neutral-800 flex justify-center">
+    <div className="bg-gradient-to-r from-slate-800 to-neutral-800 flex flex-col items-center">
+      <div className="w-full flex-wrap h-[40px] bg-green-400">
       <Navbar />
-      <div className="flex w-[70%] mt-[57px] bg-slate-200">
+      </div>
+      <div className="flex-1 justify-center w-[70%] max-sm:w-full">
         <Outlet />
       </div>
     </div>
