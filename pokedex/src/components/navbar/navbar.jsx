@@ -7,8 +7,8 @@ export default function Navbar() {
           <NavLink to="/" className={({isActive}) => isActive ? "font-bold" : ""}>Pokemons</NavLink>
           <NavLink to="/elements" className={({isActive}) => isActive ? "font-bold" : ""}>Elements</NavLink>
           <NavLink to="/egg_groups" className={({isActive}) => isActive ? "font-bold" : ""}>Egg Groups</NavLink>
-          <NavLink to="/gigans" className={({isActive}) => isActive ? "font-bold" : ""}>Gigans</NavLink>
-          <NavLink to="/mega" className={({isActive}) => isActive ? "font-bold" : ""}>Mega</NavLink>
+          {/* <NavLink to="/gigans" className={({isActive}) => isActive ? "font-bold" : ""}>Gigans</NavLink> */}
+          <NavLink to="/forms" className={({isActive}) => isActive ? "font-bold" : ""}>Forms</NavLink>
           <NavLink to="/about" className={({isActive}) => isActive ? "font-bold" : ""}>About</NavLink>
         </div>
         
