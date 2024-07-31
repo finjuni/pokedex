@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorRoute />,
     children: [{
-      path: '/pokemons',
+      path: '/',
       element: <Pokemons />
     }, {
       path: '/elements',
