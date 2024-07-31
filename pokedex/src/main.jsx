@@ -7,10 +7,10 @@ import Pokemons from './pages/pokemons.jsx'
 import Elements from './pages/elements.jsx'
 import EggGroups from './pages/egg_groups.jsx'
 import Gigans from './pages/gigans.jsx'
-import Mega from './pages/mega.jsx'
 import About from './pages/about.jsx'
 import ErrorRoute from './pages/error.jsx'
 import PokemonDetail from './pages/detail/pokemonDetail.jsx'
+import Forms from './pages/forms.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
       path: '/gigans',
       element: <Gigans />
     }, {
-      path: '/mega',
-      element: <Mega />
+      path: '/forms',
+      element: <Forms />
     }, {
       path: '/about',
       element: <About />
