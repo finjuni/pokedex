@@ -61,14 +61,14 @@ export default function PokemonDetail() {
   }
 
   return (
-    <div className="flex flex-col h-full ">
+    <div className="flex flex-col h-full text-gray-200">
       <label>poke name: {detailPokemon.name}</label>
       <label>poke id: {detailPokemon.id}</label>
       <label>weight: {detailPokemon.weight}</label>
       <div>sex</div>
 
       <form onSubmit={onBookmarked}>
-        <button type="submit" className="bg-slate-300 p-2">add</button>
+        <button type="submit" className="ring-1 p-2">add</button>
       </form>
     </div>
   )
