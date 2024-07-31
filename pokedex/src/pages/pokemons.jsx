@@ -6,13 +6,13 @@ export default function Pokemons() {
   const [listPokemon, setListPokemon] = useState([]);
 
   useEffect(() => {
-    // async function fetchData() {
-    //   const getResults = await getListPokemon();
+    async function fetchData() {
+      const getResults = await getListPokemon();
 
-    //   setListPokemon(getResults);
-    //   console.log("listPoke: ", getResults);
-    // }
-    // fetchData();
+      setListPokemon(getResults);
+      // console.log("listPoke: ", getResults);
+    }
+    fetchData();
   }, []);
 
   return (

@@ -15,11 +15,9 @@ export async function getListPokemon() {
 
     if (!res.data) return console.error("error occured: ", res.status);
 
-
-    const results = await res.data.results
+    const results = await res.data.results;
 
     // console.log("results:", results);
-
 
     if (results) {
       const bulkReq = results.map(async (item) => {
@@ -27,19 +25,19 @@ export async function getListPokemon() {
         try {
           const res = await axios.get(item.url);
 
-          if(!res.data) console.error("res status check:", res.status)
+          if (!res.data) console.error("res status check:", res.status);
 
           const data = {
             name: res?.data?.name,
             id: res?.data?.id,
             types: res?.data?.types,
             weight: res?.data?.weight,
-            pokeImg: res?.data?.sprites?.other?.dream_world
+            pokeImg: res?.data?.sprites?.other?.dream_world,
           };
 
           // console.log("data: ", data)
 
-          return data
+          return data;
         } catch (error) {
           console.error(error);
         }
@@ -47,10 +45,32 @@ export async function getListPokemon() {
 
       const listData = await Promise.all(bulkReq);
 
-      console.log("listData: ", listData)
+      console.log("listData: ", listData);
 
-      return listData
+      return listData;
     }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getDetailPokemon(id) {
+  try {
+    const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+
+    if (!res.data) console.error("res status check:", res.status);
+
+    const data = {
+      name: res?.data?.name,
+      id: res?.data?.id,
+      types: res?.data?.types,
+      weight: res?.data?.weight,
+      pokeImg: res?.data?.sprites?.other?.dream_world,
+    };
+
+    // console.log("data: ", data)
+
+    return data;
   } catch (error) {
     console.error(error);
   }

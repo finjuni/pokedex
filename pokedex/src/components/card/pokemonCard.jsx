@@ -10,7 +10,11 @@ import { Link } from "react-router-dom"
 
 export default function PokemonCard(props) {
 
-  const {name, id, types, weight} = props
+  console.log("props poke card:", props)
+
+  const {name, weight, types, id, pokeImg} = props.props
+
+  console.log()
 
   return (
     <div className='w-[322px] h-[200px] bg-slate-400 rounded-md'>
@@ -19,7 +23,7 @@ export default function PokemonCard(props) {
           <label htmlFor="">{name}</label>
           <label htmlFor="">{weight}</label>
           <label htmlFor="">{types[0].type.name}</label>
-          
+          <img src={`${pokeImg.front_default}`} />
         </div>
       </Link>
     </div>
