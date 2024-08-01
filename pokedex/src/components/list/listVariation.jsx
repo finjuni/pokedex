@@ -1,17 +1,15 @@
 import VariationCard from "../card/variationCard"
 
-export default function ListVariation() {
-  let loopPokeCard = []
+export default function ListVariation(props) {
+  if (!props) return [];
 
-  for(let i = 0; i < 35; i++) {
-   loopPokeCard.push(i)
-  }
+  const listVariation = props.props;
 
   return (
-    <div className='w-full h-full max-sm:justify-center flex flex-wrap gap-7'>
-      {loopPokeCard.map(i => (
-        <VariationCard key={i} id={i}/>
+    <div className="w-full h-full max-sm:justify-center flex flex-wrap gap-7">
+      {listVariation.map((item) => (
+          <VariationCard key={item.id} props={item} />
       ))}
     </div>
-  )
+  );
 }

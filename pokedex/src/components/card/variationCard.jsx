@@ -1,16 +1,30 @@
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
+import AddBookmark from "../bookmark/_addBookmark";
 
 export default function VariationCard(props) {
-  const {id} = props
+  const { id, name, types, image } = props.props;
+  const detailPokemon = {id, name, types, image};
+  const convertUpperCaseName = (name) => {
+    return name[0].toUpperCase() + name.slice(1);
+  }
 
   return (
-    <div className='w-[322px] h-[200px] bg-slate-400 rounded-md'>
-      <Link className="" to={`/detail/pokemonDetail/${id}`}>
-        <div className="w-full h-full">
-          test
+    <div className="w-[322px] h-[200px] bg-slate-900 rounded-md hover:shadow-md hover:shadow-slate-400 transition-all duration-300">
+      {/* <Link className="" to={`/detail/pokemonDetail/${id}`}> */}
+        <div className="w-full h-full flex flex-row justify-between p-3">
+          <div className="flex flex-col">
+            <label className="font-bold" htmlFor="">
+              {convertUpperCaseName(name)}
+            </label>
+            <label htmlFor="">#{id}</label>
+            <label htmlFor="">Types:</label>
+            <label htmlFor="">{types[0]}</label>
+            <label htmlFor="">{types[1]}</label>
+          </div>
+          <img className="w-[120px] h-[120px]" src={`${image}`} />
+      <AddBookmark detailPokemon={detailPokemon}/>
         </div>
-      </Link>
+      {/* </Link> */}
     </div>
-  )
+  );
 }
