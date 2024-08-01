@@ -90,3 +90,24 @@ export async function getDetailPokemon(input) {
   }
 }
 
+export async function getListPokemonVariation() {
+  try {
+    const response = await axios.get('https://pokeapi.co/api/v2/pokemon-form/');
+    const fetches = response.data.results.map(async p => {
+      const details = await axios.get(p.url);
+      const pokemonDetail = await axios.get(`https://pokeapi.co/api/v2/pokemon/${details.data.id}/`);
+      const image = pokemonDetail.data.sprites.other.dream_world.front_default;
+      console.log(details)
+      return {
+        id: details.data.id,
+        name: details.data.name,
+        types: details.data.types.map(typeInfo => typeInfo.type.name),
+        image: image
+      };
+    });
+    return await Promise.all(fetches);
+  } catch(error) {
+
+  }
+}
+

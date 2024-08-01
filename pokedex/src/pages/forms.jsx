@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import { getListPokemonVariation } from "../fetch/fetch";
 import ListVariation from "../components/list/listVariation";
 
 export default function Forms() {
@@ -10,19 +10,7 @@ export default function Forms() {
   useEffect(() => {
     const fetchPokemonData = async () => {
       try {
-        const response = await axios.get('https://pokeapi.co/api/v2/pokemon-form/');
-        const fetches = response.data.results.map(async p => {
-          const details = await axios.get(p.url);
-          const { id, name, sprites, types } = details.data;
-          return {
-            id,
-            name,
-            types: types.map(typeInfo => typeInfo.type.name),
-            image: sprites.front_default
-          };
-        });
-        const data = await Promise.all(fetches);
-        console.log(data);
+        const data = await getListPokemonVariation();
         setPokemonData(data);
         setLoading(false);
       } catch (error) {
@@ -37,8 +25,9 @@ export default function Forms() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
   return (
-    <div>
-      <ListVariation />
+    <div className="flex flex-col p-5 gap-2">
+      <label htmlFor="">Pokemon Variations</label>
+      <ListVariation props={pokemonData}/>
     </div>
   )
 }
