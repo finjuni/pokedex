@@ -54,12 +54,23 @@ export async function getListPokemon() {
   }
 }
 
-export async function getDetailPokemon(id) {
+export async function getDetailPokemon(input) {
+
+  let endpointUrl = ''
+
+  if(typeof input === 'string') {
+    endpointUrl = `https://pokeapi.co/api/v2/pokemon/${input}`
+  }
+
+  if(typeof input === 'number') {
+    endpointUrl = `https://pokeapi.co/api/v2/pokemon/${Number(input)}`
+  }
+
   try {
-    const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const res = await axios.get(endpointUrl);
 
     if (!res.data) console.error("res status check:", res.status);
-
+    
     const data = {
       name: res?.data?.name,
       id: res?.data?.id,
@@ -75,3 +86,4 @@ export async function getDetailPokemon(id) {
     console.error(error);
   }
 }
+
