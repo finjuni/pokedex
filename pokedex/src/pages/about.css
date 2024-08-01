@@ -1,6 +1,6 @@
 html, body {
     margin: 0;
-    height: 100%;
+    height: auto;
   }
   
   .about-container {
@@ -12,7 +12,6 @@ html, body {
     color: #e2e8f0;
     padding: 20px;
     box-sizing: border-box;
-    height: 100vh;
   }
   
   .about-container h1 {

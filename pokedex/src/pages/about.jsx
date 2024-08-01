@@ -3,7 +3,7 @@ import './about.css';
 
 export default function About() {
   return (
-    <div className="about-container h-screen">
+    <div className="about-container">
       <h1>About Pokemon Dex</h1>
       <p>
         Welcome to <strong>Pokemon Dex</strong>, a comprehensive and interactive
