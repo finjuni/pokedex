@@ -22,6 +22,8 @@ export default function PokemonDetail() {
 
   const { id } = useParams();
 
+  console.log("id params", id)
+
   useEffect(() => {
     async function fetchData() {
       const getDetail = await getDetailPokemon(id);
@@ -31,7 +33,7 @@ export default function PokemonDetail() {
       setDetailPokemon({ ...getDetail });
     }
     fetchData();
-  }, []);
+  }, [id]);
 
   return (
     <div className="flex flex-col text-gray-200 min-h-[620px] bg-slate-400 m-5 bg-transparent">
@@ -55,8 +57,8 @@ export default function PokemonDetail() {
           </div>
         </div>
 
-        <div className="flex w-[25%] max-sm:w-full max-sm:h-[70px] rounded-md bg-gray-800 ring-1 px-8 py-5">
-          <div className="flex flex-col w-full text-xl items-center gap-7">
+        <div className="flex w-[25%] max-sm:w-full max-sm:min-h-[80px] rounded-md bg-gray-800 ring-1 px-8 py-5 overflow-y-auto">
+          <div className="flex flex-col w-full text-xl items-center gap-7 max-sm:gap-3">
             <div className="flex flex-row justify-between items-center gap-5">
               <p>#{detailPokemon?.id}</p>
             </div>
@@ -91,7 +93,23 @@ export default function PokemonDetail() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col bg-slate-50 h-[200px]"></div>
+      <div className="flex flex-col bg-neutral-950 h-[220px] max-sm:min-h-[270px] w-full items-center p-5 gap-2">
+
+        {Object.keys(detailPokemon).length > 1 && (
+          <>
+          {detailPokemon?.stats.map((prop, index) => (
+            <div key={index} className="flex flex-row items-center w-[50%] max-sm:w-[100%] gap-2">
+              <p className="w-[25%]">{prop?.stat?.name}</p>
+              <meter className="w-[250px]" min={0} max={100} value={prop?.base_stat} />
+              <p>{prop?.base_stat}</p>
+            </div>
+          ))}
+          </>
+        )}
+
+        
+        
+      </div>
     </div>
   );
 }
