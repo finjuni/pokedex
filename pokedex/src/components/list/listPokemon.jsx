@@ -1,5 +1,6 @@
 
 import DeleteBookmark from "../bookmark/_deleteBookmark";
+import UpdateAlias from "../bookmark/_updateAlias";
 import PokemonCard from "../card/pokemonCard";
 import { useLocation } from "react-router-dom";
 
@@ -28,8 +29,8 @@ export default function ListPokemon(props) {
         <div className="flex flex-col gap-2" key={item?.id}>
           {ableToHandle && (
             <div className="flex flex-row w-[322px] justify-between">
-              <button>EDIT</button>
-              <p className="p-1 max-w-[50%] max-h-[42px] overflow-hidden text-nowrap"></p>
+              <UpdateAlias data={item}/>
+              <p className="p-1 max-w-[50%] max-h-[42px] overflow-hidden text-nowrap italic text-sm">Alias: {item?.alias}</p>
               <DeleteBookmark id={item?.id}/>
             </div>
           )}

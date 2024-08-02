@@ -12,10 +12,6 @@ export default function AddBookmark(prop) {
     if (!detailPokemon) return;
 
     try {
-      const checkId = await axios.get(
-        `http://localhost:3000/bookmarks/?id=${detailPokemon?.id}}`
-      );
-
       const { data } = await axios.get(
         `http://localhost:3000/bookmarks/?id=${Number(detailPokemon?.id)}`
       );
