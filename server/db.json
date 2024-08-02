@@ -1,12 +1,12 @@
 {
   "bookmarks": [
     {
-      "id": "5",
-      "name": "charmeleon",
-      "alias": "test 1",
+      "id": "3",
+      "name": "venusaur",
+      "alias": "none",
       "stats": [
         {
-          "base_stat": 58,
+          "base_stat": 80,
           "effort": 0,
           "stat": {
             "name": "hp",
@@ -14,7 +14,7 @@
           }
         },
         {
-          "base_stat": 64,
+          "base_stat": 82,
           "effort": 0,
           "stat": {
             "name": "attack",
@@ -22,7 +22,7 @@
           }
         },
         {
-          "base_stat": 58,
+          "base_stat": 83,
           "effort": 0,
           "stat": {
             "name": "defense",
@@ -30,7 +30,190 @@
           }
         },
         {
+          "base_stat": 100,
+          "effort": 2,
+          "stat": {
+            "name": "special-attack",
+            "url": "https://pokeapi.co/api/v2/stat/4/"
+          }
+        },
+        {
+          "base_stat": 100,
+          "effort": 1,
+          "stat": {
+            "name": "special-defense",
+            "url": "https://pokeapi.co/api/v2/stat/5/"
+          }
+        },
+        {
           "base_stat": 80,
+          "effort": 0,
+          "stat": {
+            "name": "speed",
+            "url": "https://pokeapi.co/api/v2/stat/6/"
+          }
+        }
+      ],
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass",
+            "url": "https://pokeapi.co/api/v2/type/12/"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison",
+            "url": "https://pokeapi.co/api/v2/type/4/"
+          }
+        }
+      ],
+      "height": 20,
+      "weight": 1000,
+      "abilities": [
+        {
+          "ability": {
+            "name": "overgrow",
+            "url": "https://pokeapi.co/api/v2/ability/65/"
+          },
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "ability": {
+            "name": "chlorophyll",
+            "url": "https://pokeapi.co/api/v2/ability/34/"
+          },
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "pokeImg": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
+        "front_female": null
+      }
+    },
+    {
+      "id": "8",
+      "name": "wartortle",
+      "alias": "none",
+      "stats": [
+        {
+          "base_stat": 59,
+          "effort": 0,
+          "stat": {
+            "name": "hp",
+            "url": "https://pokeapi.co/api/v2/stat/1/"
+          }
+        },
+        {
+          "base_stat": 63,
+          "effort": 0,
+          "stat": {
+            "name": "attack",
+            "url": "https://pokeapi.co/api/v2/stat/2/"
+          }
+        },
+        {
+          "base_stat": 80,
+          "effort": 1,
+          "stat": {
+            "name": "defense",
+            "url": "https://pokeapi.co/api/v2/stat/3/"
+          }
+        },
+        {
+          "base_stat": 65,
+          "effort": 0,
+          "stat": {
+            "name": "special-attack",
+            "url": "https://pokeapi.co/api/v2/stat/4/"
+          }
+        },
+        {
+          "base_stat": 80,
+          "effort": 1,
+          "stat": {
+            "name": "special-defense",
+            "url": "https://pokeapi.co/api/v2/stat/5/"
+          }
+        },
+        {
+          "base_stat": 58,
+          "effort": 0,
+          "stat": {
+            "name": "speed",
+            "url": "https://pokeapi.co/api/v2/stat/6/"
+          }
+        }
+      ],
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "water",
+            "url": "https://pokeapi.co/api/v2/type/11/"
+          }
+        }
+      ],
+      "height": 10,
+      "weight": 225,
+      "abilities": [
+        {
+          "ability": {
+            "name": "torrent",
+            "url": "https://pokeapi.co/api/v2/ability/67/"
+          },
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "ability": {
+            "name": "rain-dish",
+            "url": "https://pokeapi.co/api/v2/ability/44/"
+          },
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "pokeImg": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg",
+        "front_female": null
+      }
+    },
+    {
+      "id": 1,
+      "name": "bulbasaur",
+      "alias": "none",
+      "stats": [
+        {
+          "base_stat": 45,
+          "effort": 0,
+          "stat": {
+            "name": "hp",
+            "url": "https://pokeapi.co/api/v2/stat/1/"
+          }
+        },
+        {
+          "base_stat": 49,
+          "effort": 0,
+          "stat": {
+            "name": "attack",
+            "url": "https://pokeapi.co/api/v2/stat/2/"
+          }
+        },
+        {
+          "base_stat": 49,
+          "effort": 0,
+          "stat": {
+            "name": "defense",
+            "url": "https://pokeapi.co/api/v2/stat/3/"
+          }
+        },
+        {
+          "base_stat": 65,
           "effort": 1,
           "stat": {
             "name": "special-attack",
@@ -46,8 +229,103 @@
           }
         },
         {
-          "base_stat": 80,
-          "effort": 1,
+          "base_stat": 45,
+          "effort": 0,
+          "stat": {
+            "name": "speed",
+            "url": "https://pokeapi.co/api/v2/stat/6/"
+          }
+        }
+      ],
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "grass",
+            "url": "https://pokeapi.co/api/v2/type/12/"
+          }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "poison",
+            "url": "https://pokeapi.co/api/v2/type/4/"
+          }
+        }
+      ],
+      "height": 7,
+      "weight": 69,
+      "abilities": [
+        {
+          "ability": {
+            "name": "overgrow",
+            "url": "https://pokeapi.co/api/v2/ability/65/"
+          },
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "ability": {
+            "name": "chlorophyll",
+            "url": "https://pokeapi.co/api/v2/ability/34/"
+          },
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "pokeImg": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+        "front_female": null
+      }
+    },
+    {
+      "id": 6,
+      "name": "charizard",
+      "alias": "none",
+      "stats": [
+        {
+          "base_stat": 78,
+          "effort": 0,
+          "stat": {
+            "name": "hp",
+            "url": "https://pokeapi.co/api/v2/stat/1/"
+          }
+        },
+        {
+          "base_stat": 84,
+          "effort": 0,
+          "stat": {
+            "name": "attack",
+            "url": "https://pokeapi.co/api/v2/stat/2/"
+          }
+        },
+        {
+          "base_stat": 78,
+          "effort": 0,
+          "stat": {
+            "name": "defense",
+            "url": "https://pokeapi.co/api/v2/stat/3/"
+          }
+        },
+        {
+          "base_stat": 109,
+          "effort": 3,
+          "stat": {
+            "name": "special-attack",
+            "url": "https://pokeapi.co/api/v2/stat/4/"
+          }
+        },
+        {
+          "base_stat": 85,
+          "effort": 0,
+          "stat": {
+            "name": "special-defense",
+            "url": "https://pokeapi.co/api/v2/stat/5/"
+          }
+        },
+        {
+          "base_stat": 100,
+          "effort": 0,
           "stat": {
             "name": "speed",
             "url": "https://pokeapi.co/api/v2/stat/6/"
@@ -61,10 +339,17 @@
             "name": "fire",
             "url": "https://pokeapi.co/api/v2/type/10/"
           }
+        },
+        {
+          "slot": 2,
+          "type": {
+            "name": "flying",
+            "url": "https://pokeapi.co/api/v2/type/3/"
+          }
         }
       ],
-      "height": 11,
-      "weight": 190,
+      "height": 17,
+      "weight": 905,
       "abilities": [
         {
           "ability": {
@@ -84,12 +369,12 @@
         }
       ],
       "pokeImg": {
-        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg",
         "front_female": null
       }
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "caterpie",
       "alias": "none",
       "stats": [
