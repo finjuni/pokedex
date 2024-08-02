@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom";
 import AddBookmark from "../bookmark/_addBookmark";
+import { useEffect, useState } from "react";
+import { getDetailPokemon } from "../../fetch/fetch";
 
 export default function VariationCard(props) {
   const { id, name, types, image } = props.props;
-  const detailPokemon = { id, name, types, image };
+  const [detailPokemon1, setDetailPokemon1] = useState({});
   const convertUpperCaseName = (name) => {
     return name[0].toUpperCase() + name.slice(1);
   };
+
+  useEffect(() => {
+    async function fetchData() {
+      const getDetail = await getDetailPokemon(id);
+      setDetailPokemon1({ ...getDetail });
+    }
+    fetchData();
+  }, []);
 
   return (
     <div className="relative w-[322px] h-[200px] bg-slate-900 rounded-md hover:shadow-md hover:shadow-slate-400 transition-all duration-300">
@@ -28,7 +38,7 @@ export default function VariationCard(props) {
         </div>
       </Link>
       <div className="absolute inset-x-0 bottom-3 flex justify-center z-20">
-        <AddBookmark detailPokemon={detailPokemon} />
+        <AddBookmark detailPokemon={detailPokemon1} />
       </div>
     </div>
   );
