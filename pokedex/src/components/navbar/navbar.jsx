@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-      <nav className="bg-sky-800 dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-blue-400 dark:border-gray-600">
+      <nav className="bg-sky-800 dark:bg-gray-900 fixed w-full z-100 top-0 start-0 border-b border-blue-400 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink to="/" className={({isActive}) => isActive ? "font-bold" : ""}>Pokemons</NavLink>
           {/* <NavLink to="/elements" className={({isActive}) => isActive ? "font-bold" : ""}>Elements</NavLink>
