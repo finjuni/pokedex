@@ -31,10 +31,10 @@ export default function Pokemons() {
       <div className="mb-4">
         <Search handleListPokemon={handleListPokemon} />
       </div>
-      <div className="h-full">
+      <div className="h-full w-full">
         {listPokemon.length > 0 && <ListPokemon props={listPokemon} />}
         {Object.keys(detailPokemon).length !== 0 && (
-          <div className="flex flex-col h-full text-gray-200">
+          <div className="flex flex-col  h-full text-gray-200">
             <button onClick={() => window.location.reload()}>Reload</button>
             <SearchResult detailPokemon={detailPokemon} />
           </div>

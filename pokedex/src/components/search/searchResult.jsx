@@ -13,7 +13,7 @@ export default function SearchResult(props) {
   if(!detailPokemon) return <>No Data</>
 
   return (
-    <div className="flex flex-col text-gray-200 min-h-[620px] bg-slate-400 m-5 bg-transparent">
+    <div className="flex flex-col text-gray-200 min-h-[620px] w-full bg-slate-400 m-5 bg-transparent">
       {/* <label>poke name: {detailPokemon.name}</label>
     <label>poke id: {detailPokemon.id}</label>
     <label>weight: {detailPokemon.weight}</label>
