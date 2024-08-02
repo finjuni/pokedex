@@ -10,7 +10,7 @@ export default function VariationCard(props) {
 
   return (
     <div className="relative w-[322px] h-[200px] bg-slate-900 rounded-md hover:shadow-md hover:shadow-slate-400 transition-all duration-300">
-      <Link className="" to={`/detail/pokemonDetail/${id}`}>
+      <Link className="absolute inset-0 z-10" to={`/detail/pokemonDetail/${id}`}>
         <div className="w-full h-full flex flex-row justify-between p-3">
           <div className="flex flex-col">
             <label className="font-bold" htmlFor="">
@@ -29,4 +29,5 @@ export default function VariationCard(props) {
       </div>
     </div>
   );
+  
 }
