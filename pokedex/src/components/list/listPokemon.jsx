@@ -26,7 +26,13 @@ export default function ListPokemon(props) {
     <div className="w-full h-full max-sm:justify-center flex flex-wrap gap-7">
       {listPokemon.map((item) => (
         <div className="flex flex-col gap-2" key={item?.id}>
-          {ableToHandle && <DeleteBookmark id={item?.id}/>}
+          {ableToHandle && (
+            <div className="flex flex-row w-[322px] justify-between">
+              <button>EDIT</button>
+              <p className="p-1 max-w-[50%] max-h-[42px] overflow-hidden text-nowrap"></p>
+              <DeleteBookmark id={item?.id}/>
+            </div>
+          )}
           <PokemonCard props={item} />
         </div>
       ))}

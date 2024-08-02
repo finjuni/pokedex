@@ -74,6 +74,7 @@ export async function getDetailPokemon(input) {
     const data = {
       name: res?.data?.name,
       id: res?.data?.id,
+      alias: "none",
       stats: res?.data?.stats,
       types: res?.data?.types,
       height: res?.data?.height,
