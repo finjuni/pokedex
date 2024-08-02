@@ -15,7 +15,7 @@ export default function AddBookmark(prop) {
 
       const checkId = await axios.get(`http://localhost:3000/bookmarks/?id=${detailPokemon?.id}}`)
 
-      if(checkId) {
+      if(checkId.length > 0) {
          await Swal.fire({
           title: `${detailPokemon?.name} already exist`,
           icon: "warning"
@@ -27,7 +27,7 @@ export default function AddBookmark(prop) {
       await axios.post(`http://localhost:3000/bookmarks`, detailPokemon)
 
       await Swal.fire({
-          title: "To Do Added",
+          title: "Added to bookmark",
           icon: "success"
         })
 
@@ -41,7 +41,7 @@ export default function AddBookmark(prop) {
   }
   return (
     <form onSubmit={onBookmarked}>
-        <button type="submit" className="ring-1 p-2">add</button>
+        <button type="submit" className="bg-cyan-600 text-white rounded-lg hover:bg-white hover:text-cyan-600 border border-cyan-600 transition-colors duration-300 px-4 py-2">Add Bookmark</button>
     </form>
   )
 }
