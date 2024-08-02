@@ -93,7 +93,7 @@ export async function getDetailPokemon(input) {
 
 export async function getListBookmarked () {
   try {
-    const res = await axios.get(`http://localhost:3000/bookmarks`);
+    const res = await axios.get(`https://near-chivalrous-pet.glitch.me/bookmarks`);
 
     if(!res) console.error("Error Ouccred - Code: ", res.status);
 
@@ -121,7 +121,7 @@ export async function getListPokemonVariation() {
     });
     return await Promise.all(fetches);
   } catch(error) {
-
+    console.error(error)
   }
 }
 

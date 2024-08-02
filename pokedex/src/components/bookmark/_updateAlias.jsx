@@ -26,7 +26,7 @@ export default function UpdateAlias(props) {
       if (text) {
         // Swal.fire(text);
         // console.log("text send with msg: ", text)
-        await axios.put(`http://localhost:3000/bookmarks/${Number(props.id)}`, {
+        await axios.put(`https://near-chivalrous-pet.glitch.me/${Number(props.id)}`, {
           ...props,
           alias: text,
         });
