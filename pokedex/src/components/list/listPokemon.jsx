@@ -23,7 +23,7 @@ export default function ListPokemon(props) {
   console.log("bookmark list: ", listPokemon);
 
   return (
-    <div className="w-full h-full max-sm:justify-center flex flex-wrap gap-7">
+    <div className="w-full h-full max-sm:justify-center justify-center flex flex-wrap gap-7">
       {listPokemon.map((item) => (
         <div className="flex flex-col gap-2" key={item?.id}>
           {ableToHandle && (
