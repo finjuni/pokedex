@@ -26,9 +26,9 @@ export default function Pokemons() {
   }
 
   return (
-    <div className="flex flex-col p-5 gap-5">
+    <div className="flex flex-col p-5 justify-center items-center">
       <label htmlFor="">Pokemon Species</label>
-      <div>
+      <div className="mb-4">
         <Search handleListPokemon={handleListPokemon} />
       </div>
       <div className="h-full">
