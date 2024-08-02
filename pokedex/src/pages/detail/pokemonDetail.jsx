@@ -5,6 +5,7 @@ import { GiWeight } from "react-icons/gi";
 import { CiLineHeight } from "react-icons/ci";
 import { SiElement } from "react-icons/si";
 import { IoSparklesSharp } from "react-icons/io5";
+import AddBookmark from "../../components/bookmark/_addBookmark";
 
 // const data = {
 // name: res?.data?.name,
@@ -60,6 +61,8 @@ export default function PokemonDetail() {
         <div className="flex w-[25%] max-sm:w-full max-sm:min-h-[80px] rounded-md bg-gray-800 ring-1 px-8 py-5 overflow-y-auto">
           <div className="flex flex-col w-full text-xl items-center gap-7 max-sm:gap-3">
             <div className="flex flex-row justify-between items-center gap-5">
+              
+            <AddBookmark detailPokem={detailPokemon} />
               <p>#{detailPokemon?.id}</p>
             </div>
             <div className="w-full flex flex-row justify-between items-center">
@@ -107,8 +110,6 @@ export default function PokemonDetail() {
           </>
         )}
 
-        
-        
       </div>
     </div>
   );

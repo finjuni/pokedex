@@ -40,8 +40,8 @@ export default function AddBookmark(prop) {
     }
   }
   return (
-    <form onSubmit={onBookmarked}>
-        <button type="submit" className="ring-1 p-2">add</button>
+    <form className='bg-blue-950 hover:bg-blue-600 rounded-md' onSubmit={onBookmarked}>
+        <button type="submit" className="ring-1 p-2 rounded-md">Add</button>
     </form>
   )
 }
