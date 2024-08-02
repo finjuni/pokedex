@@ -3,14 +3,14 @@ import AddBookmark from "../bookmark/_addBookmark";
 
 export default function VariationCard(props) {
   const { id, name, types, image } = props.props;
-  const detailPokemon = {id, name, types, image};
+  const detailPokemon = { id, name, types, image };
   const convertUpperCaseName = (name) => {
     return name[0].toUpperCase() + name.slice(1);
-  }
+  };
 
   return (
-    <div className="w-[322px] h-[200px] bg-slate-900 rounded-md hover:shadow-md hover:shadow-slate-400 transition-all duration-300">
-      {/* <Link className="" to={`/detail/pokemonDetail/${id}`}> */}
+    <div className="relative w-[322px] h-[200px] bg-slate-900 rounded-md hover:shadow-md hover:shadow-slate-400 transition-all duration-300">
+      <Link className="" to={`/detail/pokemonDetail/${id}`}>
         <div className="w-full h-full flex flex-row justify-between p-3">
           <div className="flex flex-col">
             <label className="font-bold" htmlFor="">
@@ -22,9 +22,11 @@ export default function VariationCard(props) {
             <label htmlFor="">{types[1]}</label>
           </div>
           <img className="w-[120px] h-[120px]" src={`${image}`} />
-      <AddBookmark detailPokemon={detailPokemon}/>
         </div>
-      {/* </Link> */}
+      </Link>
+      <div className="absolute bottom-3 right-3 z-20">
+        <AddBookmark detailPokemon={detailPokemon} />
+      </div>
     </div>
   );
 }
