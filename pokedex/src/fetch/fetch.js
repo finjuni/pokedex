@@ -69,7 +69,7 @@ export async function getDetailPokemon(input) {
   try {
     const res = await axios.get(endpointUrl);
 
-    if (!res.data) console.error("res status check:", res.status);
+    if (!res.data) console.error("Error Ouccred - Code: ", res.status);
     
     const data = {
       name: res?.data?.name,
@@ -89,6 +89,19 @@ export async function getDetailPokemon(input) {
     console.error(error);
   }
 }
+
+export async function getListBookmarked () {
+  try {
+    const res = await axios.get(`http://localhost:3000/bookmarks`);
+
+    if(!res) console.error("Error Ouccred - Code: ", res.status);
+
+    return res.data
+
+  } catch (error) {
+    console.error(error)
+  }
+} 
 
 export async function getListPokemonVariation() {
   try {

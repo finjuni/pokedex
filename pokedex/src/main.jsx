@@ -11,6 +11,7 @@ import About from './pages/about.jsx'
 import ErrorRoute from './pages/error.jsx'
 import PokemonDetail from './pages/detail/pokemonDetail.jsx'
 import Forms from './pages/forms.jsx'
+import Bookmark from './pages/bookmark.jsx'
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       path: '/about',
       element: <About />
     }, {
+      path: '/bookmark',
+      element: <Bookmark />,
+    }, 
+    {
       path: '/detail/pokemonDetail/:id',
       element: <PokemonDetail />
     }]

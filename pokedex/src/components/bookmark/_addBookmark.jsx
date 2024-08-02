@@ -6,6 +6,9 @@ export default function AddBookmark(prop) {
 
   const {detailPokemon} = prop
 
+  
+  // console.log("detail id :", detailPokemon?.id)
+
   const onBookmarked = async (event) => {
     event.preventDefault()
 
@@ -13,9 +16,11 @@ export default function AddBookmark(prop) {
 
     try {
 
-      const checkId = await axios.get(`http://localhost:3000/bookmarks/?id=${detailPokemon?.id}}`)
+      const {data} = await axios.get(`http://localhost:3000/bookmarks/?id=${Number(detailPokemon?.id)}`)
 
-      if(checkId) {
+      console.log("checkId :", data)
+
+      if(data.length > 0) {
          await Swal.fire({
           title: `${detailPokemon?.name} already exist`,
           icon: "warning"
@@ -27,7 +32,7 @@ export default function AddBookmark(prop) {
       await axios.post(`http://localhost:3000/bookmarks`, detailPokemon)
 
       await Swal.fire({
-          title: "To Do Added",
+          title: `${detailPokemon.name} Added`,
           icon: "success"
         })
 

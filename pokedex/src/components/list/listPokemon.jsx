@@ -1,4 +1,7 @@
+
+import DeleteBookmark from "../bookmark/_deleteBookmark";
 import PokemonCard from "../card/pokemonCard";
+import { useLocation } from "react-router-dom";
 
 export default function ListPokemon(props) {
   // let loopPokeCard = []
@@ -7,17 +10,25 @@ export default function ListPokemon(props) {
   //  loopPokeCard.push(i)
   // }
 
-  if (!props) return [];
+  let ableToHandle = false
+  const {pathname: location} = useLocation()
+  console.log("location :",location)
 
   const listPokemon = props.props;
 
-  // console.log("listPoke: ", listPokemon);
+  if(location === '/bookmark') {
+    ableToHandle = true
+  } else ableToHandle = false
 
+  console.log("bookmark list: ", listPokemon);
 
   return (
     <div className="w-full h-full max-sm:justify-center flex flex-wrap gap-7">
       {listPokemon.map((item) => (
-          <PokemonCard key={item.id} props={item} />
+        <div className="flex flex-col gap-2" key={item?.id}>
+          {ableToHandle && <DeleteBookmark id={item?.id}/>}
+          <PokemonCard props={item} />
+        </div>
       ))}
     </div>
   );

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ListPokemon from "../components/list/listPokemon";
 import { getListPokemon } from "../fetch/fetch";
 import Search from "../components/search/search";
-import AddBookmark from "../components/bookmark/_addBookmark";
+import SearchResult from "../components/search/searchResult";
 
 export default function Pokemons() {
   const [listPokemon, setListPokemon] = useState([]);
@@ -15,7 +15,7 @@ export default function Pokemons() {
       // console.log("listPoke: ", getResults);
     }
     fetchData();
-    setDetailPokemon({})
+    setDetailPokemon({});
   }, []);
 
   // console.log(detailPokemon);
@@ -26,7 +26,7 @@ export default function Pokemons() {
   }
 
   return (
-    <div className="flex flex-col p-5 gap-2">
+    <div className="flex flex-col p-5 gap-5">
       <label htmlFor="">Pokemon Species</label>
       <div>
         <Search handleListPokemon={handleListPokemon} />
@@ -36,17 +36,7 @@ export default function Pokemons() {
         {Object.keys(detailPokemon).length !== 0 && (
           <div className="flex flex-col h-full text-gray-200">
             <button onClick={() => window.location.reload()}>Reload</button>
-            <label>poke name: {detailPokemon.name}</label>
-            <label>poke id: {detailPokemon.id}</label>
-            <label>weight: {detailPokemon.weight}</label>
-            <div>sex</div>
-            <AddBookmark detailPokemon={detailPokemon}/>
-
-            {/* <form onSubmit={onBookmarked}>
-            <button type="submit" className="ring-1 p-2">
-              add
-            </button>
-          </form> */}
+            <SearchResult detailPokemon={detailPokemon} />
           </div>
         )}
       </div>

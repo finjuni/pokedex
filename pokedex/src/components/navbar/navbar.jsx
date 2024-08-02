@@ -9,6 +9,7 @@ export default function Navbar() {
           <NavLink to="/egg_groups" className={({isActive}) => isActive ? "font-bold" : ""}>Egg Groups</NavLink>
           {/* <NavLink to="/gigans" className={({isActive}) => isActive ? "font-bold" : ""}>Gigans</NavLink> */}
           <NavLink to="/forms" className={({isActive}) => isActive ? "font-bold" : ""}>Forms</NavLink>
+          <NavLink to="/bookmark" className={({isActive}) => isActive ? "font-bold" : ""}>Bookmark</NavLink>
           <NavLink to="/about" className={({isActive}) => isActive ? "font-bold" : ""}>About</NavLink>
         </div>
         
