@@ -25,7 +25,7 @@ export default function Forms() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
   return (
-    <div className="flex flex-col p-5 gap-2">
+    <div className="flex flex-col p-5 gap-2 justify-center items-center">
       <label htmlFor="">Pokemon Variations</label>
       <ListVariation props={pokemonData}/>
     </div>
