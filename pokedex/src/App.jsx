@@ -10,7 +10,7 @@ function App() {
       <div className="w-full flex-wrap h-[57px] bg-green-400">
       <Navbar />
       </div>
-      <div className="flex-1 justify-center w-[70%] max-sm:w-full text-gray-400 container">
+      <div className="flex-1 justify-center w-[80%] max-sm:w-full text-gray-400 container">
         <Outlet />
       </div>
     </div>
