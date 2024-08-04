@@ -7,10 +7,10 @@ import axios from "axios";
 //poke types
 //poke sprites other dream_world front_default
 
-export async function getListPokemon() {
+export async function getListPokemon(pageValue) {
   try {
     const res = await axios.get(
-      `https://pokeapi.co/api/v2/pokemon?offset=0&limit=12`
+      `https://pokeapi.co/api/v2/pokemon?offset=${pageValue}&limit=12`
     );
 
     if (!res.data) return console.error("error occured: ", res.status);
@@ -45,7 +45,7 @@ export async function getListPokemon() {
 
       const listData = await Promise.all(bulkReq);
 
-      console.log("listData: ", listData);
+      // console.log("listData: ", listData);
 
       return listData;
     }
@@ -119,6 +119,7 @@ export async function getListPokemonVariation() {
         image: image
       };
     });
+    
     return await Promise.all(fetches);
   } catch(error) {
     console.error(error)

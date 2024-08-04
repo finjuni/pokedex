@@ -13,10 +13,10 @@ export default function AddBookmark(prop) {
 
     try {
       const { data } = await axios.get(
-        `https://near-chivalrous-pet.glitch.me/?id=${Number(detailPokemon?.id)}`
+        `https://near-chivalrous-pet.glitch.me/bookmarks?id=${Number(detailPokemon?.id)}`
       );
 
-      if (data.length > 0) {
+      if (Object.keys(data).length > 0) {
         await Swal.fire({
           title: `${detailPokemon?.name} already exist`,
           icon: "warning",

@@ -10,7 +10,7 @@ export default function Search(props) {
 
   // console.log("search: ", props.props)
 
-  const {handleListPokemon} = props
+  const {handleSearchPokemon} = props
 
   async function handleFormSearch(event) {
     event.preventDefault();
@@ -18,7 +18,7 @@ export default function Search(props) {
     try {
       const getResult = await getDetailPokemon(input)
 
-      await handleListPokemon(getResult)
+      await handleSearchPokemon(getResult)
 
     } catch (error) {
       console.error(error);

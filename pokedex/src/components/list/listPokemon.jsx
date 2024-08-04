@@ -13,7 +13,7 @@ export default function ListPokemon(props) {
 
   let ableToHandle = false
   const {pathname: location} = useLocation()
-  console.log("location :",location)
+  // console.log("location :",location)
 
   const listPokemon = props.props;
 
@@ -21,7 +21,7 @@ export default function ListPokemon(props) {
     ableToHandle = true
   } else ableToHandle = false
 
-  console.log("bookmark list: ", listPokemon);
+  // console.log("bookmark list: ", listPokemon);
 
   return (
     <div className="w-full h-full max-sm:justify-center justify-center flex flex-wrap gap-7">

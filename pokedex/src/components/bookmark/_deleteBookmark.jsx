@@ -11,7 +11,7 @@ export default function DeleteBookmark(prop) {
     console.log("ondelete, prop id: ", prop?.id)
 
     try {
-      const res = await axios.delete(`https://near-chivalrous-pet.glitch.me/${Number(prop?.id)}`)
+      const res = await axios.delete(`https://near-chivalrous-pet.glitch.me/bookmarks/${Number(prop?.id)}`)
 
       if (!res.data) {
         await Swal.fire("Delete Fail", "", "error");
